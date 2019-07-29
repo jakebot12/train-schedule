@@ -1,4 +1,77 @@
-<!--initialize code dependencies in head and just above body tag-->
-<!--Create a nav bar and header with title and description of web page-->
-<!--create body with a table for the information output-->
-<!--Create an input form for the users to enter thier information-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+                <h1 class="display-2">Train Scheduler</h1>
+                
+              </div>
+
+
+
+
+    <div id = "wrapper">
+    
+        <table class="table table-hover table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody id = "train-schedule" class="table table-striped">
+              
+             
+            </tbody>
+          </table>
+
+          <div class="card-body">
+              <h2>Add a New Train</h2>
+
+                <!-- Sign-up Form (note the various input "types")-->
+                <form role="form">
+                  <div class="form-group row">
+                    <label for="name-input">New Train Name:</label>
+                    <input class="form-control" id="name-input" type="text">
+                  </div>
+                  <div class="form-group row">
+                    <label for="destination-input">Destination:</label>
+                    <input class="form-control" id="destination-input" type="text">
+                  </div>
+                  <div class="form-group row">
+                    <label for="frequency-input">Frequency:</label>
+                    <input class="form-control" id="frequency-input" type="number">
+                  </div>
+                  <div class="form-group row">
+                    <label for="first-input">First Train Arrival(Military Time - HH:MM):</label>
+                    <input class="form-control" id="first-input" type="text">
+                    </div>
+                    
+                  <button class="btn btn-primary" id="add-train" type="submit" >Submit</button>
+                </form>
+    
+              </div>
+
+
+    </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase.js"></script>
+</body>
+</html>
